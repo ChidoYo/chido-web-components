@@ -17,8 +17,8 @@ The build runs these steps in order:
 3. Build native and React ES-module entry points into `dist/package/`.
 4. Emit TypeScript declarations into `dist/package/types/`.
 
-Package exports are configured for `chido-web-components` and
-`chido-web-components/react`. These use the repository's existing package name,
+Package exports are configured for `@chidoyo/chido-web-components` and
+`@chidoyo/chido-web-components/react`. These use the repository's existing package name,
 not a claim that the name is available on npm. The package remains private and
 nothing has been published. React 19 is an optional peer dependency: native-only
 consumers do not need React; consumers of `/react` must supply it. React/React DOM
@@ -34,7 +34,7 @@ build and API documentation, not the demo, tests, or source generator.
 
 ```tsx
 import { useState } from 'react';
-import { ChidoInput, ChidoCheckbox } from 'chido-web-components/react';
+import { ChidoInput, ChidoCheckbox } from '@chidoyo/chido-web-components/react';
 
 export function Profile() {
   const [name, setName] = useState('');
@@ -108,8 +108,8 @@ Refs expose the actual native custom element and its existing methods:
 
 ```tsx
 import { useRef } from 'react';
-import { ChidoTextarea } from 'chido-web-components/react';
-import type { ChidoTextarea as TextareaElement } from 'chido-web-components';
+import { ChidoTextarea } from '@chidoyo/chido-web-components/react';
+import type { ChidoTextarea as TextareaElement } from '@chidoyo/chido-web-components';
 
 const notes = useRef<TextareaElement>(null);
 // In JSX:

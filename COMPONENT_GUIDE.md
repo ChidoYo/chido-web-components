@@ -69,13 +69,13 @@ npm run build
 npm pack
 
 # In a consuming application; use the archive path printed by npm pack:
-npm install /path/to/chido-web-components-0.0.0.tgz
+npm install /path/to/chidoyo-chido-web-components-0.1.0.tgz
 ```
 
 Then use your consumer's browser bundler:
 
 ```ts
-import 'chido-web-components';
+import '@chidoyo/chido-web-components';
 ```
 
 For plain HTML without a bundler, copy **all** JavaScript files from `dist/package/`
@@ -91,7 +91,7 @@ Do not load TypeScript/SCSS source directly in an ordinary browser. Do not use
 
 The package is currently private and unpublished. The native implementation has
 no runtime component-framework dependency. React is required only for the optional
-React entry. The optional light/dark theme tokens are exported as `chido-web-components/themes.css`.
+React entry. The optional light/dark theme tokens are exported as `@chidoyo/chido-web-components/themes.css`.
 Spacing utilities remain demo/source styles; consumers provide their own page styles.
 
 ## Component directory
@@ -702,8 +702,8 @@ The build runs these steps in order:
 3. Build native and React ES-module entry points into `dist/package/`.
 4. Emit TypeScript declarations into `dist/package/types/`.
 
-Package exports are configured for `chido-web-components` and
-`chido-web-components/react`. These use the repository's existing package name,
+Package exports are configured for `@chidoyo/chido-web-components` and
+`@chidoyo/chido-web-components/react`. These use the repository's existing package name,
 not a claim that the name is available on npm. The package remains private and
 nothing has been published. React 19 is an optional peer dependency: native-only
 consumers do not need React; consumers of `/react` must supply it. React/React DOM
@@ -719,7 +719,7 @@ build and API documentation, not the demo, tests, or source generator.
 
 ```tsx
 import { useState } from 'react';
-import { ChidoInput, ChidoCheckbox } from 'chido-web-components/react';
+import { ChidoInput, ChidoCheckbox } from '@chidoyo/chido-web-components/react';
 
 export function Profile() {
   const [name, setName] = useState('');
@@ -793,8 +793,8 @@ Refs expose the actual native custom element and its existing methods:
 
 ```tsx
 import { useRef } from 'react';
-import { ChidoTextarea } from 'chido-web-components/react';
-import type { ChidoTextarea as TextareaElement } from 'chido-web-components';
+import { ChidoTextarea } from '@chidoyo/chido-web-components/react';
+import type { ChidoTextarea as TextareaElement } from '@chidoyo/chido-web-components';
 
 export function Notes() {
   const notes = useRef<TextareaElement>(null);
@@ -934,7 +934,7 @@ These checks complement manual accessibility review; they do not certify full
 WCAG conformance.
 
 ```ts
-import 'chido-web-components/themes.css';
+import '@chidoyo/chido-web-components/themes.css';
 document.documentElement.dataset.chidoTheme = 'light'; // or 'dark'
 ```
 

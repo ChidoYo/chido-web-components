@@ -4,8 +4,8 @@ import { createRoot } from 'react-dom/client';
 import {
   ChidoInput, ChidoTextarea, ChidoSelect, ChidoCheckbox, ChidoRadioGroup,
   ChidoButton, ChidoAlert, ChidoFormField, ChidoFormSummary, ChidoProgress,
-} from 'chido-web-components/react';
-import type { ChidoTextarea as TextareaElement, ChidoFormError } from 'chido-web-components';
+} from '@chidoyo/chido-web-components/react';
+import type { ChidoTextarea as TextareaElement, ChidoFormError } from '@chidoyo/chido-web-components';
 
 function App() {
   const [name, setName] = useState('Erick');

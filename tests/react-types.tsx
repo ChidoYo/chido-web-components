@@ -1,4 +1,4 @@
-import { ChidoInput, ChidoCheckbox, ChidoProgress, ChidoAlert, ChidoFormSummary } from 'chido-web-components/react';
+import { ChidoInput, ChidoCheckbox, ChidoProgress, ChidoAlert, ChidoFormSummary } from '@chidoyo/chido-web-components/react';
 
 export const valid = <ChidoInput value="Hello" minLength={2} onChidoInput={event => event.detail.value.toUpperCase()} />;
 export const checked = <ChidoCheckbox checked onChidoChange={event => event.detail.checked.valueOf()} />;

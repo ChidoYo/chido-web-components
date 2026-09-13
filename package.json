@@ -1,5 +1,5 @@
 {
-  "name": "chido-web-components",
+  "name": "@chidoyo/chido-web-components",
   "version": "0.1.0",
   "author": "Erick Adrian Perez",
   "license": "MIT",
@@ -75,5 +75,8 @@
     "react": {
       "optional": true
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

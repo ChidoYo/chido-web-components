@@ -299,6 +299,6 @@ TypeScript, custom events, tests, and live documentation. Use the demo theme sel
 to try dark/light appearances. `npm test` includes axe accessibility scans.
 Live routes: `/#/react` and `/#/documentation`.
 
-Consumers may import `chido-web-components/themes.css` and set
+Consumers may import `@chidoyo/chido-web-components/themes.css` and set
 `data-chido-theme="light"` or `"dark"` on an ancestor. Automated checks supplement,
 but do not replace, screen-reader and full WCAG conformance review.

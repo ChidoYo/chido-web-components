@@ -24,8 +24,8 @@ implemented checks, not a blanket WCAG certification.
 From an installed local package:
 
 ```ts
-import 'chido-web-components';
-import 'chido-web-components/themes.css';
+import '@chidoyo/chido-web-components';
+import '@chidoyo/chido-web-components/themes.css';
 ```
 
 Choose a theme on the document or a containing section:
