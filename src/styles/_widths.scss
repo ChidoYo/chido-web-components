@@ -1,0 +1,8 @@
+// Widths are percentages of the containing block's width.
+// Example: <chido-input class="chido-w-50" input-label="Name"></chido-input>
+// Use on block or inline-block elements; width does not size ordinary inline text.
+@each $width in (25, 50, 75, 100) {
+  .chido-w-#{$width} {
+    width: $width * 1%;
+  }
+}

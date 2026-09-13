@@ -1,0 +1,6 @@
+@use '../shared/control';
+
+@include control.styles('chido-checkbox');
+
+label { display: flex; align-items: baseline; gap: 0.625rem; }
+input { flex: none; margin: 0; width: 1.125em; height: 1.125em; }

@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "jsx": "react-jsx" },
+  "include": ["tests/fixtures/react/*.tsx", "tests/react-types.tsx"]
+}

@@ -1,0 +1,8 @@
+// Override these variables on the host. Label/help/error are intentionally light
+// DOM nodes, so consumers may also target [slot="field-label/help/error"].
+:host { min-width: 0; overflow-wrap: anywhere; display: block; font: inherit; color: inherit; }
+[part='field'] { display: grid; gap: var(--chido-form-field-gap, 0.5rem); }
+::slotted([slot='field-label']) { font-size: var(--chido-form-field-label-font-size, 0.875rem); font-weight: 600; color: var(--chido-form-field-label-color, inherit); }
+::slotted([slot='field-help']) { font-size: var(--chido-form-field-help-font-size, 0.875rem); color: var(--chido-form-field-help-color, var(--chido-color-muted, #b7bdc3)); }
+::slotted([slot='field-error']) { font-size: var(--chido-form-field-error-font-size, 0.875rem); color: var(--chido-form-field-error-color, var(--chido-color-error, #ffb4ab)); }
+::slotted([hidden]) { display: none !important; }

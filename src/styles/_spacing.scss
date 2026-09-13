@@ -1,0 +1,53 @@
+// em spacing follows the font size of the element receiving the utility.
+$spacing: (
+  0: 0,
+  1: 0.25em,
+  2: 0.5em,
+  3: 0.75em,
+  4: 1em,
+  6: 1.5em,
+  8: 2em,
+);
+
+// Use a stack to space direct children without collapsing margins.
+.chido-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.chido-stack > * {
+  margin-block: 0;
+}
+
+@each $step, $space in $spacing {
+  .chido-gap-#{$step} { gap: $space; }
+  .chido-row-gap-#{$step} { row-gap: $space; }
+  .chido-column-gap-#{$step} { column-gap: $space; }
+  .chido-mbs-#{$step} { margin-block-start: $space; }
+  .chido-mbe-#{$step} { margin-block-end: $space; }
+
+  @each $prefix, $property in (m: margin, p: padding) {
+    .chido-#{$prefix}-#{$step} { #{$property}: $space; }
+    .chido-#{$prefix}x-#{$step} {
+      #{$property}-left: $space;
+      #{$property}-right: $space;
+    }
+    .chido-#{$prefix}y-#{$step} {
+      #{$property}-top: $space;
+      #{$property}-bottom: $space;
+    }
+    .chido-#{$prefix}t-#{$step} { #{$property}-top: $space; }
+    .chido-#{$prefix}b-#{$step} { #{$property}-bottom: $space; }
+    .chido-#{$prefix}s-#{$step} { #{$property}-inline-start: $space; }
+    .chido-#{$prefix}e-#{$step} { #{$property}-inline-end: $space; }
+  }
+}
+
+.chido-m-auto { margin: auto; }
+.chido-mx-auto { margin-left: auto; margin-right: auto; }
+.chido-my-auto { margin-top: auto; margin-bottom: auto; }
+.chido-mt-auto { margin-top: auto; }
+.chido-mb-auto { margin-bottom: auto; }
+.chido-ms-auto { margin-inline-start: auto; }
+.chido-me-auto { margin-inline-end: auto; }

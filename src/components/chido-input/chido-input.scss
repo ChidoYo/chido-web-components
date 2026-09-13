@@ -1,0 +1,109 @@
+// CONSUMER STYLING GUIDE
+// Copy the following into your application's stylesheet. Set these variables
+// on chido-input to style its content without editing the component source.
+// The values shown are the component's defaults; change only what you need.
+//
+// chido-input {
+//   /* Label text and spacing above the input */
+//   --chido-input-label-font-family: inherit;
+//   --chido-input-label-font-size: 0.875rem;
+//   --chido-input-label-font-weight: 600;
+//   --chido-input-label-color: #eceeef;
+//   --chido-input-label-gap: 0.5rem;
+//
+//   /* Input text and box */
+//   --chido-input-font-family: inherit;
+//   --chido-input-font-size: 1rem;
+//   --chido-input-font-weight: inherit;
+//   --chido-input-text-color: #eceeef;
+//   --chido-input-background: #303336;
+//   --chido-input-border-color: #777c82;
+//   --chido-input-border-radius: 0.375rem;
+//   --chido-input-padding: 0.75rem 1rem;
+//
+//   /* Input states */
+//   --chido-input-placeholder-color: #b7bdc3;
+//   --chido-input-focus-color: #a8c7fa;
+//   --chido-input-disabled-opacity: 0.55;
+//
+//   /* Validation message (also used for configuration errors) */
+//   --chido-input-validation-font-family: inherit;
+//   --chido-input-validation-font-size: 0.875rem;
+//   --chido-input-validation-font-weight: 400;
+//   --chido-input-validation-color: #ffb4ab;
+//   --chido-input-validation-gap: 0.5rem;
+// }
+//
+// For additional styles, use the public CSS parts from your app stylesheet:
+// chido-input::part(label-text) { letter-spacing: 0.025em; }
+// chido-input::part(input) { border-width: 2px; }
+// chido-input::part(validation-message) { font-style: italic; }
+// The wrapping label is also available through ::part(label).
+// Ordinary selectors such as chido-input input cannot reach into Shadow DOM.
+// These SCSS comments are documentation only and are omitted from compiled CSS.
+
+:host { min-width: 0; overflow-wrap: anywhere;
+  display: block;
+  font-family: inherit;
+  color: inherit;
+}
+
+label {
+  display: grid;
+  gap: var(--chido-input-label-gap, 0.5rem);
+
+  // The visible label text.
+  span {
+    font-family: var(--chido-input-label-font-family, inherit);
+    font-size: var(--chido-input-label-font-size, 0.875rem);
+    font-weight: var(--chido-input-label-font-weight, 600);
+    color: var(--chido-input-label-color, var(--chido-color-text, #eceeef));
+  }
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: var(--chido-input-padding, 0.75rem 1rem);
+
+  // Form controls need explicit font inheritance.
+  font: inherit;
+  font-family: var(--chido-input-font-family, inherit);
+  font-size: var(--chido-input-font-size, 1rem);
+  font-weight: var(--chido-input-font-weight, inherit);
+  color: var(--chido-input-text-color, var(--chido-color-text, #eceeef));
+
+  background: var(--chido-input-background, var(--chido-color-surface, #303336));
+  border: 1px solid var(--chido-input-border-color, var(--chido-color-control-border, #777c82));
+  border-radius: var(--chido-input-border-radius, 0.375rem);
+
+  &::placeholder {
+    color: var(--chido-input-placeholder-color, var(--chido-color-muted, #b7bdc3));
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--chido-input-focus-color, var(--chido-color-accent, #a8c7fa));
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: var(--chido-input-disabled-opacity, 0.55);
+    cursor: not-allowed;
+  }
+}
+
+#validation-message {
+  display: block;
+  margin-block-start: var(--chido-input-validation-gap, 0.5rem);
+  font-family: var(--chido-input-validation-font-family, inherit);
+  font-size: var(--chido-input-validation-font-size, 0.875rem);
+  font-weight: var(--chido-input-validation-font-weight, 400);
+  color: var(--chido-input-validation-color, var(--chido-color-error, #ffb4ab));
+}
+
+// Preserve your missing-label behavior despite label's display: grid.
+[hidden] {
+  display: none !important;
+}

@@ -1,0 +1,32 @@
+// Optional consumer theme sheet. Apply data-chido-theme="light" or "dark" to
+// any ancestor. Component-specific variables still take priority over tokens.
+:root, [data-chido-theme='dark'] {
+  color-scheme: dark;
+  --chido-color-background: #242628;
+  --chido-color-surface: #303336;
+  --chido-color-text: #eceeef;
+  --chido-color-muted: #b7bdc3;
+  --chido-color-border: #464a4d;
+  --chido-color-control-border: #777c82;
+  --chido-color-accent: #a8c7fa;
+  --chido-color-accent-hover: #c3d8fc;
+  --chido-color-on-accent: #182e29;
+  --chido-color-error: #ffb4ab;
+  --chido-color-warning: #f6d58a;
+  --chido-color-success: #9bd5b1;
+}
+[data-chido-theme='light'] {
+  color-scheme: light;
+  --chido-color-background: #f5f6f7;
+  --chido-color-surface: #ffffff;
+  --chido-color-text: #202428;
+  --chido-color-muted: #4f5964;
+  --chido-color-border: #c6cdd4;
+  --chido-color-control-border: #68727c;
+  --chido-color-accent: #004fba;
+  --chido-color-accent-hover: #003f96;
+  --chido-color-on-accent: #ffffff;
+  --chido-color-error: #a32020;
+  --chido-color-warning: #865600;
+  --chido-color-success: #176638;
+}

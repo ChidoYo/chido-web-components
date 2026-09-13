@@ -1,0 +1,7 @@
+// Public parts: alert, title, message. Set --chido-alert-* on the host.
+:host { min-width: 0; overflow-wrap: anywhere; display: block; font: inherit; }
+[part='alert'] { display: grid; gap: 0.375rem; padding: var(--chido-alert-padding, 1rem); border: 1px solid var(--chido-alert-border-color, var(--chido-color-accent, #a8c7fa)); border-inline-start-width: 0.3rem; border-radius: var(--chido-alert-border-radius, 0.375rem); background: var(--chido-alert-background, var(--chido-color-surface, #303336)); color: var(--chido-alert-color, var(--chido-color-text, #eceeef)); }
+[data-variant='warning'] { border-color: var(--chido-alert-border-color, var(--chido-color-warning, #f6d58a)); }
+[data-variant='error'] { border-color: var(--chido-alert-border-color, var(--chido-color-error, #ffb4ab)); }
+[data-variant='success'] { border-color: var(--chido-alert-border-color, var(--chido-color-success, #9bd5b1)); }
+[data-empty='true'] { padding: 0; border: 0; gap: 0; }

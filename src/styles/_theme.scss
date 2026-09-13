@@ -1,0 +1,12 @@
+@use './themes';
+
+:root {
+  --chido-font-family: "IBM Plex Sans Condensed", system-ui, sans-serif;
+
+  font-family: var(--chido-font-family);
+  font-size: 100%; // Normally 16px; respects the browser's preferred font size.
+  font-weight: 400;
+  font-style: normal;
+  color: var(--chido-color-text);
+  background: var(--chido-color-background);
+}

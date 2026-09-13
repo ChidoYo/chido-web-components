@@ -1,0 +1,9 @@
+// Public parts: summary, title, list, item, link.
+:host { min-width: 0; overflow-wrap: anywhere; display: block; font: inherit; }
+section { padding: var(--chido-form-summary-padding, 1rem); border: 2px solid var(--chido-form-summary-border-color, var(--chido-color-error, #ffb4ab)); border-radius: var(--chido-form-summary-border-radius, 0.375rem); background: var(--chido-form-summary-background, var(--chido-color-surface, #303336)); color: var(--chido-form-summary-color, var(--chido-color-text, #eceeef)); }
+h2 { margin: 0 0 0.75rem; font-size: var(--chido-form-summary-title-font-size, 1.125rem); }
+ul { margin: 0; padding-inline-start: 1.5rem; }
+li + li { margin-block-start: 0.5rem; }
+a { color: var(--chido-form-summary-link-color, var(--chido-color-error, #ffb4ab)); text-decoration: underline; }
+a:focus-visible, section:focus { outline: 2px solid var(--chido-form-summary-focus-color, var(--chido-color-accent, #a8c7fa)); outline-offset: 3px; }
+[hidden] { display: none !important; }

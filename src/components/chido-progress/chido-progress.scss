@@ -1,0 +1,10 @@
+// Public parts: container, label, progress, value-text. Native progress styling
+// differs across browsers; variables supply the same colors where supported.
+:host { min-width: 0; overflow-wrap: anywhere; display: block; font: inherit; color: inherit; }
+[part='container'] { display: grid; gap: var(--chido-progress-gap, 0.5rem); }
+label { font-weight: 600; color: var(--chido-progress-label-color, inherit); }
+progress { width: 100%; height: var(--chido-progress-height, 1rem); accent-color: var(--chido-progress-color, var(--chido-color-accent, #a8c7fa)); }
+progress::-webkit-progress-bar { background: var(--chido-progress-track-color, var(--chido-color-border, #464a4d)); border-radius: 0.5rem; }
+progress::-webkit-progress-value { background: var(--chido-progress-color, var(--chido-color-accent, #a8c7fa)); border-radius: 0.5rem; }
+progress::-moz-progress-bar { background: var(--chido-progress-color, var(--chido-color-accent, #a8c7fa)); }
+[part='value-text'] { font-size: 0.875rem; color: var(--chido-progress-text-color, var(--chido-color-muted, #b7bdc3)); }
