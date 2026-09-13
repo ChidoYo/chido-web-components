@@ -1,6 +1,15 @@
 {
   "name": "chido-web-components",
   "version": "0.1.0",
+  "author": "Erick Adrian Perez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChidoYo/chido-web-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChidoYo/chido-web-components/issues"
+  },
   "description": "Framework-independent Web Components for forms and user interfaces, with TypeScript definitions, customizable themes, English and Spanish validation, and optional React wrappers.",
   "keywords": [
     "web-components",
@@ -22,6 +31,7 @@
     "generate:react": "node scripts/generate-react.mjs",
     "check:generated": "node scripts/generate-react.mjs --check",
     "predev": "npm run generate:react",
+    "prepack": "npm run build",
     "pretest": "npm run build && npm run test:types",
     "pretypecheck": "npm run generate:react",
     "test:types": "tsc -p tsconfig.react-tests.json"
